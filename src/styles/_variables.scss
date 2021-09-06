@@ -1,0 +1,123 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// see: https://codyhouse.co/blog/post/css-custom-properties-vs-sass-variables
+// -----------------------------------------------------------------------------
+//App : Defaults
+$primary: #006966 !default;
+$secondary: #3e70ae !default;
+
+// scss-docs-start color-variables
+$blue: #0294e5 !default;
+$red: #e44d4d !default;
+$yellow: #ffb400 !default;
+$green: #30ce81 !default;
+
+// scss-docs-start gray-color-variables
+$white: #fff !default;
+$gray100: #f8f9fa !default;
+$gray200: #f3f3f3 !default;
+$gray300: #e8e8e8 !default;
+$gray350: #c2c2c2 !default;
+$gray400: #656766 !default;
+$gray500: #212529 !default;
+$gray600: #1c1d1f !default;
+$black: #020204 !default;
+
+// Main Colors
+$success: $green !default;
+$danger: $red !default;
+$warning: $yellow !default;
+$info: $blue !default;
+
+$font-family: 'Poppins', 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue',
+  'Helvetica', 'Arial', sans-serif;
+
+// Code (monospace) font family
+$code-font: 'Courier New', 'DejaVu Sans Mono', 'Monaco', monospace;
+
+// Complex values
+$error-outline: 0 0 0 1px #f67777;
+$focus-outline: 0 0 0 1px #47d2ff;
+$side-shadow: 0 0.125rem 9.375rem rgba($gray400, 0.1),
+  0 0.25rem 0.5rem rgba($gray400, 0.12),
+  0 0.9375rem 1.375rem rgba($gray400, 0.1),
+  0 0.4375rem 2.1875rem rgba(#a5b6c9, 0.1);
+
+:root {
+  //Custom settings
+  --navbar-height: 50px;
+  --background-color: #{$gray100};
+  --disabled-color: #{$gray400};
+  --font-color: #{$gray400};
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  --focus-outline: #{$focus-outline};
+  --error-outline: #{$error-outline};
+  --transition: all 0.2s ease-out;
+  --side-shadow: #{$side-shadow};
+  --icon-color: #{$blue};
+  --box-shadow: 0 2px 0 rgba(90, 97, 105, 0.11),
+    0 4px 8px rgba(90, 97, 105, 0.12), 0 10px 10px rgba(90, 97, 105, 0.06),
+    0 7px 70px rgba(90, 97, 105, 0.1);
+
+  --primary: #{$primary}; // Main
+  --secondary: #{$secondary}; // Main
+
+  --success: #{$success};
+  --danger: #{$danger};
+  --warning: #{$warning};
+  --info: #{$info};
+
+  --blue: #{$blue};
+  --red: #{$red};
+  --yellow: #{$yellow};
+  --green: #{$green};
+
+  // Grey scale
+  --white: #{$white};
+  --gray100: #{$gray100};
+  --gray200: #{$gray200};
+  --gray300: #{$gray300};
+  --gray350: #{$gray350};
+  --gray400: #{$gray400};
+  --gray500: #{$gray500};
+  --gray600: #{$gray600};
+  --black: #{$black};
+
+  // Spacing
+  --space: 1rem;
+  --space-xxs: calc(var(--space) / 5);
+  --space-xs: calc(var(--space) / 4);
+  --space-sm: calc(var(--space) / 1.5);
+  --space-md: calc(var(--space) * 1.5);
+  --space-lg: calc(var(--space) * 2.2);
+  --space-xl: calc(var(--space) * 3.5);
+  --space-xxl: calc(var(--space) * 5.5);
+  --space-xxxl: calc(var(--space) * 7.5);
+
+  // body font size
+  --font: 1rem;
+  --font-xxs: calc(var(--font) * 0.7);
+  --font-xs: calc(var(--font) * 0.8);
+  --font-sm: calc(var(--font) * 0.9);
+  --font-md: calc(var(--font) * 1.3);
+  --font-lg: calc(var(--font) * 1.6);
+  --font-xl: calc(var(--font) * 2);
+  --font-xxl: calc(var(--font) * 3);
+  --font-xxxl: calc(var(--font) * 4);
+
+  --active-icon: var(--gray700);
+  --focus-icon: var(--gray600);
+  --focus-color: var(--font-color);
+  --focus-background: #fffcf1;
+
+  --locked-icon: var(--gray500);
+  --locked-color: var(--gray700);
+  --locked-background: #f4f9fd;
+
+  --disabled-icon: var(--gray400);
+  --disabled-color: var(--gray500);
+  --disabled-background: var(--gray300);
+
+  --border-default: 1px solid var(--gray300);
+}

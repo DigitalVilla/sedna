@@ -1,0 +1,14 @@
+.home {
+  padding: 2rem 0;
+  .container {
+    header {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 0.5rem;
+    }
+
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+  }
+}

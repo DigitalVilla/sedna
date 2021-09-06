@@ -1,0 +1,52 @@
+@use "sass:math";
+
+$breakpoints: (
+  xxs: 320px,
+  xs: 360px,
+  sm: 560px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1200px,
+  xxl: 1600px,
+  hd: 1920px,
+);
+
+// Mobile first approach
+@mixin media($breakpoint, $limit: 0, $landscape: false) {
+  $screen: $breakpoint;
+
+  @if map-has-key($breakpoints, $breakpoint) {
+    $screen: map-get($breakpoints, $breakpoint);
+  }
+
+  @if $limit != 0 {
+    @if map-has-key($breakpoints, $limit) {
+      $limit: map-get($breakpoints, $limit) - 1;
+    }
+    @media (min-width: $screen) and (max-width: $limit) {
+      @content;
+    }
+  } @else if $landscape {
+    @media (min-width: $screen) and (orientation: landscape) {
+      @content;
+    }
+  } @else {
+    @media (min-width: $screen) {
+      @content;
+    }
+  }
+}
+
+@mixin animate($name, $params, $from: true) {
+  @keyframes #{$name} {
+    @if $from {
+      from {
+        @content;
+      }
+    } @else {
+      @content;
+    }
+  }
+
+  animation: $name $params;
+}
