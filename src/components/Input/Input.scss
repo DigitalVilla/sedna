@@ -1,0 +1,45 @@
+.app-input {
+  --background: white;
+  --color: var(--font-color);
+  font-size: var(--font-size, inherit);
+  display: flex;
+  flex-direction: column;
+
+  &-container {
+    --columns: 1fr;
+
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: 1fr;
+    grid-template-columns: var(--columns);
+  }
+  &-field {
+    background-color: var(--background);
+    color: var(--color);
+    padding: 0.4rem 0.7rem;
+    grid-column: 1/-1;
+    grid-row: 1/2;
+
+    &:read-only:not(:disabled) {
+      --background: var(--locked-background);
+      --color: var(--locked-color);
+      cursor: default;
+      box-shadow: none;
+    }
+    &:disabled {
+      --background: var(--disabled-background);
+      --color: var(--disabled-color);
+    }
+    &.hasError:not(:disabled):not(:read-only) {
+      box-shadow: var(--error-outline);
+    }
+    &:focus {
+      --background: var(--focus-background);
+      --color: var(--focus-color);
+    }
+  }
+  ::placeholder {
+    color: var(--color);
+    font-size: var(--font);
+  }
+}

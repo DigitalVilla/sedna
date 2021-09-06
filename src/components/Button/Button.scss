@@ -1,0 +1,42 @@
+.app-btn {
+  font-weight: 500;
+  color: white;
+  background: none;
+  border: 1px solid transparent;
+  padding: 4px;
+  width: 100%;
+  font-family: inherit;
+  --theme: var(--primary);
+  --disabled-background: var(--gray350);
+
+  &:hover {
+    cursor: pointer;
+  }
+  &.size-none {
+    width: unset;
+  }
+  &.default {
+    background-color: var(--disabled-color);
+    color: White;
+  }
+
+  &.fill {
+    background-color: var(--theme);
+    color: white;
+
+    &.disabled,
+    &:disabled {
+      background-color: var(--gray300) !important;
+      color: var(--gray350) !important;
+    }
+  }
+
+  border-color: var(--theme);
+  color: var(--theme);
+
+  &:disabled,
+  &.disabled {
+    border-color: var(--disabled-background) !important;
+    color: var(--disabled-color) !important;
+  }
+}

@@ -1,0 +1,10 @@
+.item-list {
+  .not-found {
+    h2 {
+      text-align: center;
+    }
+    border-radius: 5px;
+    background: var(--gray200);
+    padding: 1rem 2rem;
+  }
+}

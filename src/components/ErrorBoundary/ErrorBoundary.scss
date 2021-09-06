@@ -1,0 +1,59 @@
+.error-boundary {
+  background-color: var(--off-white);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  .card {
+    position: relative;
+    width: 90vw;
+    max-width: 500px;
+    margin: 15vh auto 0;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 6px;
+    box-shadow: var(--box-shadow);
+
+    .title {
+      height: 6rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      h1 {
+        line-height: 1.2;
+      }
+
+      .app-icon {
+        height: 3rem;
+        width: 3rem;
+      }
+    }
+
+    p {
+      color: var(--gray600);
+      margin: 0.5rem 0 2rem;
+    }
+
+    a.app-btn {
+      padding: 0.3rem 2rem;
+      text-decoration: none;
+
+      &:hover {
+        color: white;
+      }
+    }
+  }
+
+  .logo {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 1rem;
+    max-width: 200px;
+    opacity: 0.9;
+  }
+}

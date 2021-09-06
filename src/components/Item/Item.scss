@@ -1,0 +1,92 @@
+@import '../../styles/mixins';
+
+.app-item {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  background: var(--gray200);
+  margin-bottom: 0.5rem;
+  padding: 1rem 2rem;
+  align-items: center;
+  text-align: center;
+  font-size: 15px;
+  flex-direction: column;
+
+  .info,
+  .tag-list {
+    flex-basis: 100%;
+    min-height: 30px;
+    margin-bottom: 0.5rem;
+  }
+
+  .info {
+    h3 {
+      font-weight: 500;
+    }
+    p {
+      color: var(--gray400);
+    }
+  }
+
+  .tag-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    svg {
+      fill: white;
+      height: 1rem;
+      padding-top: 0.3rem;
+    }
+
+    .tag-label {
+      border-radius: 10px;
+      color: white;
+      background: var(--secondary);
+      padding: 0 0 0 0.7rem;
+      margin-left: 0.5rem;
+      text-transform: capitalize;
+      font-size: 14px;
+      overflow: hidden;
+      margin-bottom: 0.1rem;
+
+      button {
+        color: white;
+        padding: 0 0.7rem 0 0.5rem;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .add-tag {
+    margin: auto;
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-end;
+    button {
+      width: 110px;
+      margin-left: 0.5rem;
+    }
+  }
+
+  @include media(md) {
+    text-align: left;
+    flex-direction: row;
+
+    .info,
+    .tag-list {
+      flex-basis: 35%;
+      margin-bottom: 0;
+    }
+
+    .tag-list {
+      justify-content: flex-end;
+    }
+
+    .add-tag {
+      margin: 0;
+      flex-basis: 25%;
+    }
+  }
+}
