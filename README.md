@@ -28,6 +28,11 @@
 - Improve responsive design
 - Add a library to parse date in a friendly manner
 
+## Instructions
+
+- Run `yarn` to install all Node dependencies
+- Run `yarn start` to launch the application in your localhost
+
 > UI Design
 
 <p align="center"><img src="./design.jpg" alt="Introducing to sedna"></p>
